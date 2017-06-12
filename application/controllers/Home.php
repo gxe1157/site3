@@ -78,6 +78,7 @@ class Home extends Frontend_Controller {
 		
 		$this->data['contents'] = "partials/".$content;
 		$this->data['title'] = rawurldecode($page_title);
+
 		$this->_render_page('html_template/html_master_view', $this->data);			
 	}
 	

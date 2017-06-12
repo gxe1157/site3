@@ -96,7 +96,7 @@
 				<img src="/public/images/CFS-web-box.png" alt="Catalog Fulfillment Services" style="width:300px;height:400px;"/>				
 -->
 
-				<p style="margin-left: 10px; margin-top: 20px;"><img src="/public/images/FSMImg.png" alt="Shop Image" style="width:310px;height:310px;"</p>				
+				<p style="margin-left: 10px; margin-top: 20px;"><img src="<?= base_url() ?>/public/images/FSMImg.png" alt="Shop Image" style="width:310px;height:310px;"</p>				
 
                 </div>
                 <div class="col-md-8">

@@ -17,21 +17,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta name="author" content="">
     <title><?= $title ?></title>
-    <link href="<?= WEBROOTPATH ?>/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<?= WEBROOTPATH ?>/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?= WEBROOTPATH ?>/css/prettyPhoto.css" rel="stylesheet">
-    <link href="<?= WEBROOTPATH ?>/css/animate.css" rel="stylesheet">
-    <link href="<?= WEBROOTPATH ?>/css/main.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/prettyPhoto.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/animate.css" rel="stylesheet">
+    <link href="<?= base_url() ?>public/css/main.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= WEBROOTPATH ?>/images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= WEBROOTPATH ?>/images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= WEBROOTPATH ?>/images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="<?= WEBROOTPATH ?>/images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="<?= base_url() ?>public/images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?= base_url() ?>public/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?= base_url() ?>public/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?= base_url() ?>public/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<?= base_url() ?>public/images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
+
 <body>
     <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
         <div class="container">
@@ -42,35 +43,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo site_url('home/index'); ?>"><img id="fsm_logo" src="<?= WEBROOTPATH ?>/images/logo.png" width=323 height=48 alt="logo"></a>
+                <a class="navbar-brand" href="<?php echo base_url()?>home">
+                <img id="fsm_logo" src="<?= base_url() ?>public/images/logo.png" width=323 height=48 alt="logo"></a>
 			</div>
 			
             <div class="collapse navbar-collapse">
 			
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo site_url('home/index'); ?>">Home</a></li>
+                    <li><a href="<?= base_url() ?>home" >Home</a></li>
 					
 					<?php if( $contents !== 'partials/upload' ):?>
 					
                     <li>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="icon-angle-down"></span></a>
                         <ul class="dropdown-menu">
-							<li><a href="<?php echo site_url('home/index/about-us/About Us'); ?>">About Us</a></li>					
-							<li><a href="<?php echo site_url('home/index/contact-us/Contact Us'); ?>">Contact Us</a></li>
+							<li><a href="<?= base_url() ?>home/index/about-us/About Us">About Us</a></li>					
+							<li><a href="<?= base_url() ?>home/index/contact-us/Contact Us">Contact Us</a></li>
                         </ul>
 					</li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <span class="icon-angle-down"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo site_url('home/index/multi_channel/Multi-Channel Solutions'); ?>">Multi-Channel Solutions</a></li>												 
-                            <li><a href="<?php echo site_url('home/index/digital_print/Digital Printing With Variable Data'); ?>">Digital Printing</a></li>						
-                            <li><a href="<?php echo site_url('home/index/non_profit/Non-Profit Campaigns'); ?>">Non-Profit Campaigns</a></li>
-                            <li><a href="<?php echo site_url('home/index/political/Political Mailing Campaigns'); ?>">Political Mailing Campaigns</a></li>
-                            <li><a href="<?php echo site_url('home/index/new_home_owner/New Home Owners'); ?>">New Home Owners</a></li>
-                            <li><a href="<?php echo site_url('home/index/eddm/Every Door Direct Mail'); ?>">Every Door Direct Mail</a></li>							
+                            <li><a href="<?= base_url() ?>home/index/multi_channel/Multi-Channel Solutions">Multi-Channel Solutions</a></li>												 
+                            <li><a href="<?= base_url() ?>home/index/digital_print/Digital Printing With Variable Data">Digital Printing</a></li>						
+                            <li><a href="<?= base_url() ?>home/index/non_profit/Non-Profit Campaigns">Non-Profit Campaigns</a></li>
+                            <li><a href="<?= base_url() ?>home/index/political/Political Mailing Campaigns">Political Mailing Campaigns</a></li>
+                            <li><a href="<?= base_url() ?>home/index/new_home_owner/New Home Owners">New Home Owners</a></li>
+                            <li><a href="<?= base_url() ?>home/index/eddm/Every Door Direct Mail">Every Door Direct Mail</a></li>							
                         </ul>
                     </li>
-                    <li><a href="<?php echo site_url('home/index/upload/Upload Files'); ?>">Upload Files </a></li> 
+                    <li><a href="<?= base_url() ?>home/index/upload/Upload Files">Upload Files </a></li> 
 
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> My Account <strong class="caret"></strong></a>
@@ -93,7 +95,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								<a href="<?php echo site_url('auth/logout'); ?>"><span class="glyphicon glyphicon-off"></span> Sign out</a>
 							</li>
 -->							
-							<li><a href="<?php echo site_url('home/index/login/Customer Login'); ?>">Login</a></li>											
+							<li><a href="<?= base_url() ?>home/index/login/Customer Login">Login</a></li>											
 						</ul>
 					</li>
 			    <?php endif ?>									
@@ -139,12 +141,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h4>Experts In:</h4>
                     <div>
                         <ul class="arrow">
-                            <li><a href="<?php echo site_url('home/index/multi_channel/Multi-Channel Direct Marketing Solutions'); ?>">Multi-Channel Direct Marketing Solutions</a></li>												 
-                            <li><a href="<?php echo site_url('home/index/digital_print/Digital Printing With Variable Data'); ?>">Digital Printing With Variable Data</a></li>						
-                            <li><a href="<?php echo site_url('home/index/non_profit/Non-Profit Campaigns'); ?>">Non-Profit Campaigns</a></li>
-                            <li><a href="<?php echo site_url('home/index/political/Political Mailing Campaigns'); ?>">Political Mailing Campaigns</a></li>
-                            <li><a href="<?php echo site_url('home/index/new_home_owner/New Home Owners Outreach'); ?>">New Home Owners Outreach</a></li>
-                            <li><a href="<?php echo site_url('home/index/eddm/Every Door Direct Mail'); ?>">Every Door Direct Mail (EDDM)</a></li>							
+                            <li><a href="<?= base_url() ?>home/index/multi_channel/Multi-Channel Direct Marketing Solutions">Multi-Channel Direct Marketing Solutions</a></li>												 
+                            <li><a href="<?= base_url() ?>home/index/digital_print/Digital Printing With Variable Data">Digital Printing With Variable Data</a></li>						
+                            <li><a href="<?= base_url() ?>home/index/non_profit/Non-Profit Campaigns">Non-Profit Campaigns</a></li>
+                            <li><a href="<?= base_url() ?>home/index/political/Political Mailing Campaigns">Political Mailing Campaigns</a></li>
+                            <li><a href="<?= base_url() ?>home/index/new_home_owner/New Home Owners Outreach">New Home Owners Outreach</a></li>
+                            <li><a href="<?= base_url() ?>home/index/eddm/Every Door Direct Mail">Every Door Direct Mail (EDDM)</a></li>							
                         </ul>
                     </div>
                 </div><!--/.col-md-3-->
@@ -153,11 +155,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <h4>Company</h4>
                     <div>
                         <ul class="arrow">
-                            <li><a href="<?php echo site_url('home/index'); ?>">Home</a></li>
-                            <li><a href="<?php echo site_url('home/index/about-us/About Us'); ?>">About Us</a></li>
-                            <li><a href="<?php echo site_url('home/index/contact-us/Contact Us'); ?>">Contact Us</a></li>
-                            <li><a href="<?php echo site_url('home/index/under_construction/Privacy Policy'); ?>">Privacy Policy</a></li>
-                            <li><a href="<?php echo site_url('home/index/under_construction/Terms of Use'); ?>">Terms of Use</a></li>
+                            <li><a href="<?= base_url() ?>home/index">Home</a></li>
+                            <li><a href="<?= base_url() ?>home/index/about-us/About Us">About Us</a></li>
+                            <li><a href="<?= base_url() ?>home/index/contact-us/Contact Us">Contact Us</a></li>
+                            <li><a href="<?= base_url() ?>home/index/under_construction/Privacy Policy">Privacy Policy</a></li>
+                            <li><a href="<?= base_url() ?>home/index/under_construction/Terms of Use">Terms of Use</a></li>
                         </ul>
                     </div>
                 </div><!--/.col-md-3-->
@@ -199,13 +201,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </footer><!--/#footer-->
 
 	<?php if( $title !=="Upload Files" ){ ?>
-		<script src="<?= WEBROOTPATH ?>/js/jquery.js"></script>
+		<script src="<?= base_url() ?>public/js/jquery.js"></script>
 	<?php } ?>
-		<script src="<?= WEBROOTPATH ?>/js/bootstrap.min.js"></script>
+		<script src="<?= base_url() ?>public/js/bootstrap.min.js"></script>
 	<?php if( $title !=="Upload Files" ){ ?>
-		<script src="<?= WEBROOTPATH ?>/js/jquery.prettyPhoto.js"></script>
+		<script src="<?= base_url() ?>public/js/jquery.prettyPhoto.js"></script>
 	<?php } ?>
-		<script src="<?= WEBROOTPATH ?>/js/main.js"></script>
+		<script src="<?= base_url() ?>public/js/main.js"></script>
 	
 </body>
 </html>
